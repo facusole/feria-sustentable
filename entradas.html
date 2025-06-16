@@ -31,9 +31,15 @@
                 <h2>Seleccionar Ciudad y Fecha</h2>
                 <div class="selector-flex">
                     <div class="selector-col">
-                        <label for="selectCiudad">Ciudad</label>
+                        <label for="selectCiudad">Ciudad
+                            </label>
                         <select id="selectCiudad" onchange="actualizarFechas()">
-                            <option value="">Ciudad</option>
+                            <option value="">
+                                <div>
+                                <img src="img/Logo.png" alt="Logo FeriaEco" class="logo">
+                                Ciudad
+                            </div>
+                        </option>
                             <option value="Rosario">Rosario</option>
                             <option value="Mendoza">Mendoza</option>
                             <option value="Córdoba">Córdoba</option>
@@ -52,6 +58,7 @@
                 </div>
             </section>
         </div>
+    
         <div class="entradas-carrito-flex">
             <section class="entradas-disponibles">
                 <h2>Entradas Disponibles</h2>
@@ -87,10 +94,10 @@
                         </div>
                     </div>
                     <div class="entrada-card">
-                        <img src="img/entradaGrupal.png" alt="Admisión para Grupos" />
+                        <img src="img/entradaGrupal.png" alt="Admisión Grupos" />
                         <div class="entrada" data-precio="150000">
                             <div>
-                                <div class="entrada-titulo">Admisión para Grupos</div>
+                                <div class="entrada-titulo">Admisión Grupos</div>
                                 <div class="entrada-precio">$150000</div>
                             </div>
                             <div class="entrada-desc">Tarifa con descuento para grupos de 10.</div>
@@ -121,18 +128,18 @@
                     <button type="button" class="carrito-finalizar">Finalizar compra</button>
                     <div class="carrito-pago">Opciones de pago seguras disponibles</div>
                     <div class="carrito-promo">
-                        <label for="promoCodeInput">Código promocional</label>
-                        <input id="promoCodeInput" type="text" placeholder="Ingresa el código" />
+                        <input id="promoCodeInput" type="text" placeholder="Código promocional" />
                         <button type="button" onclick="aplicarDescuento()">Aplicar</button>
                     </div>
                 </div>
+                <section class="promo-link">
+                    <h3>¡No te pierdas nuestras promociones especiales!</h3>
+                    <a href="https://ejemplo.com/promociones" target="_blank" class="promo-btn">Ver promociones</a>
+                </section>
             </aside>
         </div>
     </main>
-    <section class="promo">
-        <h3>¡No te pierdas nuestras promociones especiales!</h3>
-        <a href="https://ejemplo.com/promociones" target="_blank" class="promo-btn">Ver promociones</a>
-    </section>
+
     <script src="scriptEntradas.js"></script>
 </body>
 

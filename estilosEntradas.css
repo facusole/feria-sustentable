@@ -25,18 +25,22 @@
   gap: 32px;
 }
 
-/* Selector ciudad y fecha */
+
 .selector-ciudad-fecha {
-  flex: 2 1 0;
-  background: #fff;
-  border-radius: 16px;
-  box-shadow: 0 2px 8px rgba(49,113,52,0.09);
-  padding: 32px 32px 24px 32px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  width: 100%;
+  max-width: none;
+  margin: 0;
 }
 
+.selector-ciudad-fecha.centrado {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.selector-ciudad-fecha .selector-flex {
+  justify-content: center;
+}
 .selector-flex {
   display: flex;
   gap: 16px;
@@ -65,7 +69,7 @@
 .selector-col select {
   padding: 10px 16px;
   border-radius: 12px;
-  border: 1.5px solid rgba(73,110,75,0.2);
+  border: 1.5px solid rgba(73, 110, 75, 0.2);
   font-family: 'Public Sans', sans-serif;
   font-size: 16px;
 }
@@ -113,7 +117,7 @@
   flex-direction: column;
   align-items: stretch;
   overflow: hidden;
-  box-shadow: 0 2px 8px rgba(49,113,52,0.09);
+  box-shadow: 0 2px 8px rgba(49, 113, 52, 0.09);
 }
 
 .entrada-card img {
@@ -177,13 +181,16 @@
 }
 
 /* Promo */
-.promo {
-  margin: 40px auto 0 auto;
-  padding: 0;
-  background: none;
-  border-radius: 0;
+.promo-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-  max-width: 700px;
+  gap: 16px;
+  padding: 32px 40px;
+  min-height: 160px;
+  box-sizing: border-box;
+  transition: transform 0.3s ease;
 }
 
 .promo h3 {
@@ -212,9 +219,6 @@
   flex: 1 1 320px;
   max-width: 350px;
   min-width: 260px;
-  background: #F3F8F3;
-  border-radius: 20px;
-  box-shadow: 0 2px 8px rgba(49,113,52,0.09);
   padding: 28px 0;
   display: flex;
   flex-direction: column;
@@ -226,12 +230,14 @@
 .carrito-resumen {
   width: 100%;
   padding: 28px;
-  background: rgba(49,113,52,0.09);
+  box-sizing: border-box;
+  background: rgba(49, 113, 52, 0.09);
   border-radius: 20px;
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
+
 
 .carrito-resumen h3 {
   font-family: 'Roboto Serif', serif;
@@ -270,7 +276,7 @@
 
 .carrito-pago {
   text-align: center;
-  color: rgba(20,46,21,0.62);
+  color: rgba(20, 46, 21, 0.62);
   font-size: 13px;
   font-family: 'Public Sans', sans-serif;
   margin-top: 8px;
@@ -281,6 +287,9 @@
   align-items: flex-end;
   gap: 8px;
   margin-top: 12px;
+  width: 100%;
+  box-sizing: border-box;
+  flex-wrap: wrap;
 }
 
 .carrito-promo label {
@@ -293,11 +302,14 @@
 .carrito-promo input {
   flex: 1;
   padding: 8px 12px;
-  background: rgba(49,113,52,0.09);
+  background: rgba(49, 113, 52, 0.09);
   border: none;
   border-radius: 16px;
   font-size: 15px;
   font-family: 'Public Sans', sans-serif;
+  min-width: 0;
+  box-sizing: border-box;
+
 }
 
 .carrito-promo button {
@@ -310,6 +322,8 @@
   font-family: 'Public Sans', sans-serif;
   font-weight: 500;
   border: none;
+  box-sizing: border-box;
+
 }
 
 @media (max-width: 1100px) {
@@ -317,13 +331,16 @@
     padding: 24px 8px;
     max-width: 100vw;
   }
+
   .fila-superior {
     flex-direction: column;
     gap: 24px;
   }
+
   .entradas-flex {
     flex-wrap: wrap;
   }
+
   .carrito {
     max-width: 100%;
     width: 100%;
