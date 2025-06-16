@@ -1,4 +1,4 @@
-/* Contenedor principal */
+/* Estructura principal */
 .contenedor-entradas {
   display: flex;
   flex-direction: column;
@@ -25,7 +25,7 @@
   gap: 32px;
 }
 
-
+/* Selectores de ciudad y fecha */
 .selector-ciudad-fecha {
   width: 100%;
   max-width: none;
@@ -33,61 +33,75 @@
 }
 
 .selector-ciudad-fecha.centrado {
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
+  background: none;
+  box-shadow: none;
+  padding: 0 0 32px 0;
 }
 
-.selector-ciudad-fecha .selector-flex {
-  justify-content: center;
+.selector-ciudad-fecha.centrado h3 {
+  font-size: 2rem;
+  font-family: 'Roboto Serif', serif;
+  font-weight: 700;
+  color: #232F20;
+  margin-bottom: 32px;
 }
+
 .selector-flex {
   display: flex;
-  gap: 16px;
+  flex-direction: row;
+  gap: 24px;
+  align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
 .selector-col {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
   min-width: 120px;
 }
 
-.selector-btn {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-}
-
 .selector-col label {
+  color: #232F20;
   font-family: 'Public Sans', sans-serif;
-  font-size: 15px;
-  color: #1B281B;
-  margin-bottom: 4px;
+  margin-bottom: 0;
 }
 
 .selector-col select {
-  padding: 10px 16px;
-  border-radius: 12px;
-  border: 1.5px solid rgba(73, 110, 75, 0.2);
+  padding: 12px 24px;
+  border-radius: 24px;
+  border: 2px solid #D6E2D6;
+  background: #fff;
+  color: #232F20;
   font-family: 'Public Sans', sans-serif;
-  font-size: 16px;
+  min-width: 320px;
+  margin-left: 0;
 }
 
 .selector-btn button {
-  height: 42px;
-  padding: 0 24px;
-  background: #4CAF50;
-  color: #fff;
+  padding: 12px 36px;
+  border-radius: 32px;
+  background: #67B65B;
+  color: white;
   font-family: 'Public Sans', sans-serif;
-  font-size: 16px;
-  font-weight: 500;
+  font-weight: 600;
   border: none;
-  border-radius: 16px;
   cursor: pointer;
 }
 
-/* Entradas disponibles */
+.selector-btn button:hover {
+  background: #4CAF50;
+  color: #fff;
+}
+
+/* Entradas */
 .entradas-disponibles {
   width: 100%;
   margin-top: 0;
@@ -133,7 +147,8 @@
   gap: 12px;
 }
 
-.entrada-titulo {
+.entrada-titulo,
+.entrada-precio {
   font-family: 'Roboto Serif', serif;
   font-size: 20px;
   font-weight: 700;
@@ -141,9 +156,7 @@
 }
 
 .entrada-precio {
-  font-family: 'Roboto Serif', serif;
-  font-size: 20px;
-  color: #1B281B;
+  font-weight: 400;
 }
 
 .entrada-desc {
@@ -180,40 +193,6 @@
   font-weight: 500;
 }
 
-/* Promo */
-.promo-link {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 16px;
-  padding: 32px 40px;
-  min-height: 160px;
-  box-sizing: border-box;
-  transition: transform 0.3s ease;
-}
-
-.promo h3 {
-  color: #1B281B;
-  font-size: 20px;
-  font-family: 'Roboto Serif', serif;
-  font-weight: 700;
-  margin-bottom: 16px;
-}
-
-.promo-btn {
-  display: inline-block;
-  margin-top: 0;
-  padding: 12px 24px;
-  background: #4CAF50;
-  color: #fff;
-  border-radius: 16px;
-  text-decoration: none;
-  font-family: 'Public Sans', sans-serif;
-  font-size: 16px;
-  font-weight: 500;
-}
-
 /* Carrito */
 .carrito {
   flex: 1 1 320px;
@@ -237,7 +216,6 @@
   flex-direction: column;
   gap: 20px;
 }
-
 
 .carrito-resumen h3 {
   font-family: 'Roboto Serif', serif;
@@ -309,7 +287,6 @@
   font-family: 'Public Sans', sans-serif;
   min-width: 0;
   box-sizing: border-box;
-
 }
 
 .carrito-promo button {
@@ -323,9 +300,43 @@
   font-weight: 500;
   border: none;
   box-sizing: border-box;
-
 }
 
+/* Promo */
+.promo-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+  padding: 32px 40px;
+  min-height: 160px;
+  box-sizing: border-box;
+  transition: transform 0.3s ease;
+}
+
+.promo h3 {
+  color: #1B281B;
+  font-size: 20px;
+  font-family: 'Roboto Serif', serif;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.promo-btn {
+  display: inline-block;
+  margin-top: 0;
+  padding: 12px 24px;
+  background: #4CAF50;
+  color: #fff;
+  border-radius: 16px;
+  text-decoration: none;
+  font-family: 'Public Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* Media Queries */
 @media (max-width: 1100px) {
   .contenedor-entradas {
     padding: 24px 8px;
@@ -366,5 +377,21 @@
   .entradas-flex {
     flex-direction: column;
     gap: 16px;
+  }
+
+  .selector-flex {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .selector-col select,
+  .selector-btn button {
+    min-width: 200px;
+    font-size: 1.2rem;
+    padding: 10px 16px;
+  }
+
+  .selector-ciudad-fecha.centrado h2 {
+    font-size: 2rem;
   }
 }
