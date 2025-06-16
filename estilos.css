@@ -147,6 +147,143 @@ body {
   line-height: 1.6;
 }
 
+/* Contacto */
+.contacto-contenido {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 40px 20px;
+}
+
+.texto-contacto {
+  flex: 1;
+  min-width: 250px;
+}
+
+.texto-contacto h2 {
+  font-size: 34px;
+  font-family: 'Roboto Serif', serif;
+  margin-bottom: 12px;
+  color: #1B281B;
+}
+
+.texto-contacto p {
+  font-size: 18px;
+  line-height: 1.5;
+  color: #4A5245;
+  font-family: 'Public Sans', sans-serif;
+  max-width: 500px;
+}
+
+.formulario {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.campo-doble {
+  display: flex;
+  gap: 16px;
+}
+
+.campo-doble input {
+  flex: 1;
+}
+
+/* Campos del Formulario */
+input,
+textarea {
+  padding: 14px;
+  border-radius: 12px;
+  background-color: #F0F0E4; /* crema tirando a gris */
+  border: 2px solid rgba(42, 92, 18, 0.3);
+  font-size: 15px;
+  font-family: 'Public Sans', sans-serif;
+  color: #1B281B;
+  resize: none;
+  box-sizing: border-box;
+}
+
+textarea {
+  min-height: 120px;
+  width: 100%;
+}
+
+/* Botón de Enviar */
+button[type="submit"] {
+  background-color: #39833C;
+  color: #F0F0E4;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 16px;
+  font-family: 'Public Sans', sans-serif;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #2a902b;
+}
+
+.faq {
+  padding: 40px 20px;
+}
+
+.faq-contenido {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.faq-titulo {
+  flex: 1;
+  min-width: 250px;
+}
+
+.faq-titulo h2 {
+  font-size: 34px;
+  font-family: 'Roboto Serif', serif;
+  color: #1B281B;
+  margin: 0;
+}
+
+.faq-preguntas {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.pregunta {
+  padding: 20px 0;
+  border-top: 1px solid #CCC;
+  border-bottom: 1px solid #CCC;
+}
+
+.pregunta h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+  font-family: 'Public Sans', sans-serif;
+  color: #1B281B;
+  cursor: pointer;
+}
+
+.pregunta h3:hover {
+  background-color: #E0E0D8;
+}
+
+
+
+
 /* Footer */
 footer {
   background-color: #E9F1E7;
@@ -172,6 +309,9 @@ footer {
   width: 32px;
   height: 32px;
 }
+
+
+
 
 /* Responsive */
 @media (max-width: 768px) {
