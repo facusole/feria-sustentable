@@ -435,12 +435,6 @@ button[type="submit"]:hover {
   max-width: 800px;
 }
 
-
-
-
-
-
-
 /* Footer */
 footer {
   background-color: #E9F1E7;
@@ -467,8 +461,34 @@ footer {
   height: 32px;
 }
 
-
-
+/* --- FLEXBOX Y RESPONSIVE PARA NUEVO ORDEN --- */
+.entradas-carrito-flex {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  align-items: flex-start;
+  width: 100%;
+}
+.entradas-disponibles {
+  flex: 2 1 0;
+  width: 100%;
+}
+.carrito {
+  flex: 1 1 320px;
+  max-width: 350px;
+  min-width: 260px;
+}
+@media (max-width: 900px) {
+  .entradas-carrito-flex {
+    flex-direction: column;
+    gap: 24px;
+  }
+  .carrito {
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
 
 /* Responsive */
 @media (max-width: 768px) {
@@ -507,6 +527,92 @@ footer {
   .promo p {
     text-align: center;
   }
+}
+
+/* --- RESPONSIVE PARA ENTRADAS --- */
+@media (max-width: 900px) {
+  .contenedor-entradas {
+    padding: 16px 4vw;
+    gap: 24px;
+  }
+  .fila-superior {
+    flex-direction: column;
+    gap: 24px;
+  }
+  .selector-ciudad-fecha,
+  .carrito {
+    max-width: 100%;
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+  .carrito {
+    margin: 0 auto;
+    position: static;
+    top: unset;
+  }
+  .entradas-flex {
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .entrada-card {
+    max-width: 100%;
+    min-width: 0;
+    width: 100%;
+  }
+  .promo {
+    max-width: 100%;
+    padding: 0 2vw;
+  }
+}
+
+@media (max-width: 600px) {
+  .contenedor-entradas {
+    padding: 8px 0;
+  }
+  .selector-ciudad-fecha {
+    padding: 16px 8px;
+  }
+  .carrito-resumen {
+    padding: 16px 8px;
+  }
+  .entradas-disponibles h2 {
+    font-size: 1.5rem;
+  }
+  .promo h3 {
+    font-size: 1rem;
+  }
+  .promo-btn {
+    font-size: 1rem;
+    padding: 10px 16px;
+  }
+}
+
+/* Nueva regla para centrar contenido de la sección 'Seleccionar Ciudad y Fecha' */
+.selector-ciudad-fecha {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  border-radius: 24px;
+  box-shadow: 0 2px 16px 0 rgba(49,113,52,0.07);
+  background: #fff;
+  padding: 40px 0 32px 0;
+}
+
+.selector-ciudad-fecha.centrado {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.selector-ciudad-fecha .selector-flex {
+  justify-content: center;
+}
+
+.contenedor-entradas {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 

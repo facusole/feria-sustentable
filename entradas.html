@@ -27,7 +27,7 @@
     </header>
     <main class="contenedor-entradas">
         <div class="fila-superior">
-            <section class="selector-ciudad-fecha">
+            <section class="selector-ciudad-fecha centrado">
                 <h2>Seleccionar Ciudad y Fecha</h2>
                 <div class="selector-flex">
                     <div class="selector-col">
@@ -48,6 +48,58 @@
                     <div class="selector-col selector-btn">
                         <label style="height: 18px;"></label>
                         <button type="button" onclick="confirmarSeleccion()">Confirmar</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="entradas-carrito-flex">
+            <section class="entradas-disponibles">
+                <h2>Entradas Disponibles</h2>
+                <div class="entradas-flex">
+                    <div class="entrada-card">
+                        <img src="img/entradaPersonal.png" alt="Admisión General" />
+                        <div class="entrada" data-precio="2000">
+                            <div>
+                                <div class="entrada-titulo">Admisión General</div>
+                                <div class="entrada-precio">$2000</div>
+                            </div>
+                            <div class="entrada-desc">Acceso para una persona a todas las áreas del evento.</div>
+                            <div class="entrada-contador">
+                                <button type="button" onclick="restarEntrada(this)">−</button>
+                                <div class="contador">0</div>
+                                <button type="button" onclick="sumarEntrada(this)">+</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="entrada-card">
+                        <img src="img/entradaFamiliar.png" alt="Paquete Familiar" />
+                        <div class="entrada" data-precio="7000">
+                            <div>
+                                <div class="entrada-titulo">Paquete Familiar</div>
+                                <div class="entrada-precio">$7000</div>
+                            </div>
+                            <div class="entrada-desc">Paquete familiar para 4 personas</div>
+                            <div class="entrada-contador">
+                                <button type="button" onclick="restarEntrada(this)">−</button>
+                                <div class="contador">0</div>
+                                <button type="button" onclick="sumarEntrada(this)">+</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="entrada-card">
+                        <img src="img/entradaGrupal.png" alt="Admisión para Grupos" />
+                        <div class="entrada" data-precio="150000">
+                            <div>
+                                <div class="entrada-titulo">Admisión para Grupos</div>
+                                <div class="entrada-precio">$150000</div>
+                            </div>
+                            <div class="entrada-desc">Tarifa con descuento para grupos de 10.</div>
+                            <div class="entrada-contador">
+                                <button type="button" onclick="restarEntrada(this)">−</button>
+                                <div class="contador">0</div>
+                                <button type="button" onclick="sumarEntrada(this)">+</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -76,56 +128,6 @@
                 </div>
             </aside>
         </div>
-        <section class="entradas-disponibles">
-            <h2>Entradas Disponibles</h2>
-            <div class="entradas-flex">
-                <div class="entrada-card">
-                    <img src="img/entradaPersonal.png" alt="Admisión General" />
-                    <div class="entrada" data-precio="2000">
-                        <div>
-                            <div class="entrada-titulo">Admisión General</div>
-                            <div class="entrada-precio">$2000</div>
-                        </div>
-                        <div class="entrada-desc">Acceso para una persona a todas las áreas del evento.</div>
-                        <div class="entrada-contador">
-                            <button type="button" onclick="restarEntrada(this)">−</button>
-                            <div class="contador">0</div>
-                            <button type="button" onclick="sumarEntrada(this)">+</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="entrada-card">
-                    <img src="img/entradaFamiliar.png" alt="Paquete Familiar" />
-                    <div class="entrada" data-precio="7000">
-                        <div>
-                            <div class="entrada-titulo">Paquete Familiar</div>
-                            <div class="entrada-precio">$7000</div>
-                        </div>
-                        <div class="entrada-desc">Paquete familiar para 4 personas</div>
-                        <div class="entrada-contador">
-                            <button type="button" onclick="restarEntrada(this)">−</button>
-                            <div class="contador">0</div>
-                            <button type="button" onclick="sumarEntrada(this)">+</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="entrada-card">
-                    <img src="img/entradaGrupal.png" alt="Admisión para Grupos" />
-                    <div class="entrada" data-precio="150000">
-                        <div>
-                            <div class="entrada-titulo">Admisión para Grupos</div>
-                            <div class="entrada-precio">$150000</div>
-                        </div>
-                        <div class="entrada-desc">Tarifa con descuento para grupos de 10.</div>
-                        <div class="entrada-contador">
-                            <button type="button" onclick="restarEntrada(this)">−</button>
-                            <div class="contador">0</div>
-                            <button type="button" onclick="sumarEntrada(this)">+</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
     </main>
     <section class="promo">
         <h3>¡No te pierdas nuestras promociones especiales!</h3>
