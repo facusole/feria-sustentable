@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FeriaEco 2025</title>
+    <link rel="stylesheet" href="estilos.css" />
+    <link rel="stylesheet" href="estilosEntradas.css" />
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500&family=Roboto+Serif:wght@700&display=swap"
+        rel="stylesheet" />
+    <link rel="icon" href="img/Logo.png" type="image/png">
+</head>
+
+<body>
+    <header class="encabezado">
+        <img src="img/Logo.png" alt="Logo FeriaEco" class="logo">
+        <h1>FeriaEco 2025</h1>
+        <nav class="menu">
+            <a href="#">Inicio</a>
+            <a href="#">Stands</a>
+            <a href="#">Entradas</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+    </header>
+    <main class="contenedor-entradas">
+        <div class="fila-superior">
+            <section class="selector-ciudad-fecha">
+                <h2>Seleccionar Ciudad y Fecha</h2>
+                <div class="selector-flex">
+                    <div class="selector-col">
+                        <label for="selectCiudad">Ciudad</label>
+                        <select id="selectCiudad" onchange="actualizarFechas()">
+                            <option value="">Ciudad</option>
+                            <option value="Rosario">Rosario</option>
+                            <option value="Mendoza">Mendoza</option>
+                            <option value="Córdoba">Córdoba</option>
+                        </select>
+                    </div>
+                    <div class="selector-col">
+                        <label for="selectFecha">Fecha</label>
+                        <select id="selectFecha">
+                            <option value="">Fecha</option>
+                        </select>
+                    </div>
+                    <div class="selector-col selector-btn">
+                        <label style="height: 18px;"></label>
+                        <button type="button" onclick="confirmarSeleccion()">Confirmar</button>
+                    </div>
+                </div>
+            </section>
+            <aside class="carrito">
+                <div class="carrito-resumen">
+                    <h3>Resumen del Carrito</h3>
+                    <div class="carrito-linea">
+                        <span>Subtotal</span>
+                        <span id="subtotal">$0</span>
+                    </div>
+                    <div class="carrito-linea">
+                        <span>Descuento</span>
+                        <span id="descuento">$0</span>
+                    </div>
+                    <div class="carrito-linea total">
+                        <span>Total</span>
+                        <span id="total">$0</span>
+                    </div>
+                    <button type="button" class="carrito-finalizar">Finalizar compra</button>
+                    <div class="carrito-pago">Opciones de pago seguras disponibles</div>
+                    <div class="carrito-promo">
+                        <label for="promoCodeInput">Código promocional</label>
+                        <input id="promoCodeInput" type="text" placeholder="Ingresa el código" />
+                        <button type="button" onclick="aplicarDescuento()">Aplicar</button>
+                    </div>
+                </div>
+            </aside>
+        </div>
+        <section class="entradas-disponibles">
+            <h2>Entradas Disponibles</h2>
+            <div class="entradas-flex">
+                <div class="entrada-card">
+                    <img src="img/entradaPersonal.png" alt="Admisión General" />
+                    <div class="entrada" data-precio="2000">
+                        <div>
+                            <div class="entrada-titulo">Admisión General</div>
+                            <div class="entrada-precio">$2000</div>
+                        </div>
+                        <div class="entrada-desc">Acceso para una persona a todas las áreas del evento.</div>
+                        <div class="entrada-contador">
+                            <button type="button" onclick="restarEntrada(this)">−</button>
+                            <div class="contador">0</div>
+                            <button type="button" onclick="sumarEntrada(this)">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="entrada-card">
+                    <img src="img/entradaFamiliar.png" alt="Paquete Familiar" />
+                    <div class="entrada" data-precio="7000">
+                        <div>
+                            <div class="entrada-titulo">Paquete Familiar</div>
+                            <div class="entrada-precio">$7000</div>
+                        </div>
+                        <div class="entrada-desc">Paquete familiar para 4 personas</div>
+                        <div class="entrada-contador">
+                            <button type="button" onclick="restarEntrada(this)">−</button>
+                            <div class="contador">0</div>
+                            <button type="button" onclick="sumarEntrada(this)">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="entrada-card">
+                    <img src="img/entradaGrupal.png" alt="Admisión para Grupos" />
+                    <div class="entrada" data-precio="150000">
+                        <div>
+                            <div class="entrada-titulo">Admisión para Grupos</div>
+                            <div class="entrada-precio">$150000</div>
+                        </div>
+                        <div class="entrada-desc">Tarifa con descuento para grupos de 10.</div>
+                        <div class="entrada-contador">
+                            <button type="button" onclick="restarEntrada(this)">−</button>
+                            <div class="contador">0</div>
+                            <button type="button" onclick="sumarEntrada(this)">+</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <section class="promo">
+        <h3>¡No te pierdas nuestras promociones especiales!</h3>
+        <a href="https://ejemplo.com/promociones" target="_blank" class="promo-btn">Ver promociones</a>
+    </section>
+    <script src="scriptEntradas.js"></script>
+</body>
+
+</html>
