@@ -1,0 +1,92 @@
+/* estilosMapa.css - Estilos para la página de mapa y horarios */
+
+.contenedor-mapa {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.mapa-section {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 2px 8px rgba(49,113,52,0.09);
+  padding: 32px 24px 24px 24px;
+  text-align: center;
+}
+.mapa-section h2 {
+  font-family: 'Roboto Serif', serif;
+  font-size: 2rem;
+  margin-bottom: 18px;
+}
+.mapa-iframe {
+  width: 100%;
+  max-width: 900px;
+  height: 400px;
+  border: none;
+  border-radius: 16px;
+  margin: 0 auto 12px auto;
+  display: block;
+}
+.mapa-descripcion {
+  color: #1B281B;
+  font-size: 1rem;
+  margin-top: 8px;
+}
+.horarios-section {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 2px 8px rgba(49,113,52,0.09);
+  padding: 32px 24px 24px 24px;
+}
+.horarios-section h2 {
+  font-family: 'Roboto Serif', serif;
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+}
+.horarios-generales {
+  list-style: disc inside;
+  margin-bottom: 18px;
+  color: #232F20;
+  font-size: 1.1rem;
+}
+.tabla-horarios {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 12px;
+  font-size: 1rem;
+}
+.tabla-horarios th, .tabla-horarios td {
+  border: 1px solid #D6E2D6;
+  padding: 8px 12px;
+  text-align: center;
+}
+.tabla-horarios th {
+  background: #F3F8F3;
+  font-weight: 700;
+}
+.tabla-horarios tr:nth-child(even) {
+  background: #F9FBF9;
+}
+@media (max-width: 700px) {
+  .contenedor-mapa {
+    padding: 12px 2vw;
+    gap: 24px;
+  }
+  .mapa-section, .horarios-section {
+    padding: 16px 4px;
+  }
+  .mapa-iframe {
+    height: 220px;
+  }
+  .tabla-horarios th, .tabla-horarios td {
+    font-size: 0.95rem;
+    padding: 6px 4px;
+  }
+}
+@media (max-width: 600px) {
+  img, .img-responsive, .banner-img, .index-img {
+    display: none !important;
+  }
+}

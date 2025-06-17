@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mapa y Horarios - FeriaEco 2025</title>
+    <link rel="stylesheet" href="estilos.css" />
+    <link rel="stylesheet" href="estilosMapa.css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500&family=Roboto+Serif:wght@700&display=swap"
+        rel="stylesheet" />
+    <link rel="icon" href="img/Logo.png" type="image/png">
+</head>
+
+<body>
+    <header class="encabezado">
+        <img src="img/Logo.png" alt="Logo FeriaEco" class="logo">
+        <h1>FeriaEco 2025</h1>
+        <nav class="menu">
+            <nav class="menu">
+                <a href="./index.html">Inicio</a>
+                <a href="./mapa.html">Ferias</a>
+                <a href="./entradas.html">Entradas</a>
+                <a href="./contacto.html">Contacto</a>
+            </nav>
+        </nav>
+    </header>
+    <main class="contenedor-mapa">
+        <section class="mapa-section">
+            <h2>Mapa Interactivo de los Predios</h2>
+            <iframe src="https://www.google.com/maps/d/embed?mid=15-bmy4ZEK4pCgfMufo-LUNtws-Pujbo&ehbc=2E312F&noprof=1"
+                width="640" height="480"></iframe>
+            <p class="mapa-descripcion">Haz zoom y clic en los marcadores para ver la ubicación de cada predio donde se
+                realizará la feria.</p>
+        </section>
+        <section class="horarios-section">
+            <h2>Días y Horarios de Apertura</h2>
+            <ul class="horarios-generales">
+                <li><strong>Rosario:</strong> 3 y 4 de septiembre de 2025</li>
+                <li><strong>Mendoza:</strong> 10 y 11 de septiembre de 2025</li>
+                <li><strong>Córdoba:</strong> 17 y 18 de septiembre de 2025</li>
+            </ul>
+            <h3>Horarios detallados por ciudad</h3>
+            <table class="tabla-horarios">
+                <thead>
+                    <tr>
+                        <th>Ciudad</th>
+                        <th>Día</th>
+                        <th>Apertura</th>
+                        <th>Cierre</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Rosario</td>
+                        <td>3/09/2025</td>
+                        <td>10:00</td>
+                        <td>20:00</td>
+                    </tr>
+                    <tr>
+                        <td>Rosario</td>
+                        <td>4/09/2025</td>
+                        <td>10:00</td>
+                        <td>20:00</td>
+                    </tr>
+                    <tr>
+                        <td>Mendoza</td>
+                        <td>10/09/2025</td>
+                        <td>11:00</td>
+                        <td>21:00</td>
+                    </tr>
+                    <tr>
+                        <td>Mendoza</td>
+                        <td>11/09/2025</td>
+                        <td>11:00</td>
+                        <td>21:00</td>
+                    </tr>
+                    <tr>
+                        <td>Córdoba</td>
+                        <td>17/09/2025</td>
+                        <td>12:00</td>
+                        <td>22:00</td>
+                    </tr>
+                    <tr>
+                        <td>Córdoba</td>
+                        <td>18/09/2025</td>
+                        <td>12:00</td>
+                        <td>22:00</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+</body>
+
+</html>
