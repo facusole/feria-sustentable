@@ -117,14 +117,14 @@
 .entradas-flex {
   display: flex;
   gap: 24px;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
+  flex-wrap: wrap;
+justify-content: space-between;
 }
 
 .entrada-card {
-  min-width: 260px;
-  max-width: 350px;
-  flex: 1 1 0;
+  min-width: 200px;
+  max-width: 100%;
+  flex: 1 1 30%;
   background: #F3F8F3;
   border-radius: 20px;
   display: flex;
