@@ -1,13 +1,13 @@
 body {
   margin: 0;
-  font-family: 'Public Sans', sans-serif;
-  background-color: #FBFDFC;
-  color: #1B281B;
+  font-family: "Public Sans", sans-serif;
+  background-color: #fbfdfc;
+  color: #1b281b;
 }
 
 /* Encabezado */
 .encabezado {
-  background-color: #DDEDE1;
+  background-color: #ddede1;
   text-align: center;
   padding: 20px 10px;
 }
@@ -18,7 +18,7 @@ body {
 }
 
 .encabezado h1 {
-  font-family: 'Roboto Serif', serif;
+  font-family: "Roboto Serif", serif;
   font-size: 32px;
   margin: 10px 0;
 }
@@ -26,7 +26,7 @@ body {
 .menu a {
   margin: 0 10px;
   text-decoration: none;
-  color: #1B281B;
+  color: #1b281b;
   font-weight: 500;
 }
 
@@ -41,7 +41,7 @@ body {
 }
 
 .titulo-principal {
-  font-family: 'Roboto Serif', serif;
+  font-family: "Roboto Serif", serif;
   font-size: 36px;
   font-weight: 700;
   margin-bottom: 20px;
@@ -67,7 +67,7 @@ body {
 }
 
 .dia {
-  font-family: 'Roboto Serif', serif;
+  font-family: "Roboto Serif", serif;
   font-size: 35px;
   font-weight: 600;
   color: #888; /* gris para los no activos */
@@ -75,10 +75,9 @@ body {
 }
 
 .dia.activo {
-  color: #1B281B; /* negro para el activo */
+  color: #1b281b; /* negro para el activo */
   text-decoration: underline;
 }
-
 
 .actividad {
   display: flex;
@@ -101,7 +100,7 @@ body {
 }
 
 .info a {
-  color: #39833C;
+  color: #39833c;
   font-weight: 500;
   text-decoration: none;
 }
@@ -134,13 +133,13 @@ body {
 /* Misión */
 .mision {
   padding: 40px 20px;
-  background-color: #F4F8F1;
+  background-color: #f4f8f1;
   text-align: center;
 }
 
 .mision h2 {
   font-size: 28px;
-  font-family: 'Roboto Serif', serif;
+  font-family: "Roboto Serif", serif;
 }
 
 .mision p {
@@ -154,10 +153,16 @@ body {
 .contacto-contenido {
   display: flex;
   justify-content: space-between;
-  gap: 40px;
+  gap: 24px;
   align-items: flex-start;
   flex-wrap: wrap;
   padding: 40px 20px;
+
+  @media (min-width: 1024px) {
+    & {
+      gap: 40px;
+    }
+  }
 }
 
 .texto-contacto {
@@ -167,16 +172,16 @@ body {
 
 .texto-contacto h2 {
   font-size: 34px;
-  font-family: 'Roboto Serif', serif;
+  font-family: "Roboto Serif", serif;
   margin-bottom: 12px;
-  color: #1B281B;
+  color: #1b281b;
 }
 
 .texto-contacto p {
   font-size: 18px;
   line-height: 1.5;
-  color: #4A5245;
-  font-family: 'Public Sans', sans-serif;
+  color: #4a5245;
+  font-family: "Public Sans", sans-serif;
   max-width: 500px;
 }
 
@@ -190,7 +195,14 @@ body {
 
 .campo-doble {
   display: flex;
+  flex-direction: column; /* default para mobile y tablet */
   gap: 16px;
+
+  @media (min-width: 1024px) {
+    & {
+      flex-direction: row;
+    }
+  }
 }
 
 .campo-doble input {
@@ -202,11 +214,11 @@ input,
 textarea {
   padding: 14px;
   border-radius: 12px;
-  background-color: #F0F0E4; /* crema tirando a gris */
+  background-color: #f0f0e4; /* crema tirando a gris */
   border: 2px solid rgba(42, 92, 18, 0.3);
   font-size: 15px;
-  font-family: 'Public Sans', sans-serif;
-  color: #1B281B;
+  font-family: "Public Sans", sans-serif;
+  color: #1b281b;
   resize: none;
   box-sizing: border-box;
 }
@@ -218,14 +230,14 @@ textarea {
 
 /* Botón de Enviar */
 button[type="submit"] {
-  background-color: #39833C;
-  color: #F0F0E4;
+  background-color: #39833c;
+  color: #f0f0e4;
   padding: 12px 24px;
   border: none;
   border-radius: 12px;
   font-weight: bold;
   font-size: 16px;
-  font-family: 'Public Sans', sans-serif;
+  font-family: "Public Sans", sans-serif;
   cursor: pointer;
   align-self: flex-start;
   transition: background-color 0.3s ease;
@@ -237,6 +249,12 @@ button[type="submit"]:hover {
 
 .faq {
   padding: 40px 20px;
+
+  @media (min-width: 1024px) {
+    & {
+      padding: 40px 48px;
+    }
+  }
 }
 
 .faq-contenido {
@@ -252,8 +270,8 @@ button[type="submit"]:hover {
 
 .faq-titulo h2 {
   font-size: 34px;
-  font-family: 'Roboto Serif', serif;
-  color: #1B281B;
+  font-family: "Roboto Serif", serif;
+  color: #1b281b;
   margin: 0;
 }
 
@@ -267,34 +285,46 @@ button[type="submit"]:hover {
 
 .pregunta {
   padding: 20px 0;
-  border-top: 1px solid #CCC;
-  border-bottom: 1px solid #CCC;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
 }
 
 .pregunta h3 {
   font-size: 18px;
   font-weight: 600;
   margin: 0;
-  font-family: 'Public Sans', sans-serif;
-  color: #1B281B;
+  font-family: "Public Sans", sans-serif;
+  color: #1b281b;
   cursor: pointer;
 }
 
 .pregunta h3:hover {
-  background-color: #E0E0D8;
+  background-color: #e0e0d8;
+}
+
+.respuesta {
+  max-height: 0;
+  margin: 0;
+  padding-block: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+.respuesta_activa {
+  max-height: 200px;
+  padding-block: 1rem;
 }
 
 /* Promociones */
 .promociones {
   padding: 60px 20px;
-  background-color: #FBFDFC;
+  background-color: #fbfdfc;
 }
 
 .promociones h2 {
   font-size: 48px;
-  font-family: 'Roboto Serif', serif;
+  font-family: "Roboto Serif", serif;
   font-weight: 700;
-  color: #1D221B;
+  color: #1d221b;
   margin-bottom: 48px;
   text-align: center;
 }
@@ -331,7 +361,7 @@ button[type="submit"]:hover {
   min-width: 48px;
   min-height: 48px;
   background-color: transparent;
-  border: 3px solid #204F0A;
+  border: 3px solid #204f0a;
   border-radius: 50%;
   box-sizing: border-box;
   flex-shrink: 0;
@@ -340,9 +370,9 @@ button[type="submit"]:hover {
 /* Texto promocional */
 .promo p {
   font-size: 20px;
-  font-family: 'Roboto Serif', serif;
+  font-family: "Roboto Serif", serif;
   font-weight: 500;
-  color: #1D221B;
+  color: #1d221b;
   line-height: 1.4;
   margin: 0;
 }
@@ -357,8 +387,8 @@ button[type="submit"]:hover {
 
 .seccion-titulo {
   font-size: 36px;
-  font-family: 'Roboto Serif', serif;
-  color: #1B281B;
+  font-family: "Roboto Serif", serif;
+  color: #1b281b;
   text-align: left;
   margin-bottom: 40px;
   padding-left: 20px;
@@ -371,8 +401,8 @@ button[type="submit"]:hover {
 
 .medios-pago h2 {
   font-size: 34px;
-  font-family: 'Roboto Serif', serif;
-  color: #1B281B;
+  font-family: "Roboto Serif", serif;
+  color: #1b281b;
   margin-bottom: 40px;
 }
 
@@ -398,9 +428,9 @@ button[type="submit"]:hover {
 
 .pago h3 {
   font-size: 20px;
-  font-family: 'Cutive', serif;
+  font-family: "Cutive", serif;
   margin-bottom: 12px;
-  color: #1D221B;
+  color: #1d221b;
 }
 
 .pago img {
@@ -419,7 +449,6 @@ button[type="submit"]:hover {
   width: 80%;
 }
 
-
 .mensaje-seguridad {
   padding: 32px 20px;
   text-align: center;
@@ -427,17 +456,17 @@ button[type="submit"]:hover {
 
 .mensaje-seguridad p {
   font-size: 18px;
-  font-family: 'Roboto Serif', serif;
+  font-family: "Roboto Serif", serif;
   font-weight: 400;
   line-height: 1.6;
-  color: #1B281B;
+  color: #1b281b;
   margin: 0 auto;
   max-width: 800px;
 }
 
 /* Footer */
 footer {
-  background-color: #E9F1E7;
+  background-color: #e9f1e7;
   text-align: center;
   padding: 40px 20px;
 }
@@ -445,7 +474,7 @@ footer {
 .footer-titulo {
   font-size: 24px;
   margin-bottom: 20px;
-  font-family: 'Roboto Serif', serif;
+  font-family: "Roboto Serif", serif;
 }
 
 .redes {
@@ -588,4 +617,3 @@ footer {
     padding: 10px 16px;
   }
 }
-
