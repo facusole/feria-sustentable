@@ -1,0 +1,194 @@
+/* estilosPago.css - Estilos específicos para la página de pago */
+
+body {
+  background: #FBFDFC;
+}
+
+/* --- AJUSTES DE ALINEACIÓN Y DISTRIBUCIÓN PARA FORMULARIO DE PAGO --- */
+.contenedor-pago {
+  display: flex;
+  flex-direction: row;
+  gap: 48px;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 40px 32px 0 32px;
+  align-items: flex-start;
+}
+
+.pago-formulario {
+  flex: 2 1 0;
+  background: none;
+}
+.pago-formulario h2 {
+  font-family: 'Roboto Serif', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+.pago-metodos {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+.pago-metodo {
+  background: #F3F8F3;
+  border: 2px solid #67B65B;
+  border-radius: 18px;
+  padding: 18px 32px;
+  font-family: 'Public Sans', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #232F20;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: background 0.2s, border 0.2s;
+  height: 56px;
+  min-width: 220px;
+  justify-content: center;
+}
+.pago-metodo.activo {
+  background: #E6F4E6;
+}
+.pago-metodo:not(.activo) {
+  border: 2px solid #D6E2D6;
+  background: #fff;
+}
+
+.formulario-tarjeta {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.fila-form {
+  display: flex;
+  gap: 18px;
+  margin-bottom: 0;
+}
+.campo-form {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.campo-form label {
+  font-size: 1rem;
+  color: #232F20;
+  font-family: 'Public Sans', sans-serif;
+  font-weight: 500;
+}
+.campo-form input[type="text"] {
+  padding: 16px 18px;
+  border-radius: 16px;
+  border: none;
+  background: #F3F8F3;
+  font-size: 1.1rem;
+  color: #232F20;
+  font-family: 'Public Sans', sans-serif;
+  height: 48px;
+  box-sizing: border-box;
+}
+.campo-form input[type="text"]:focus {
+  outline: 2px solid #67B65B;
+}
+.direccion-checkbox {
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+.agregar-linea {
+  color: #3A8C3A;
+  font-size: 1rem;
+  margin-top: 4px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.carrito {
+  flex: 1 1 320px;
+  max-width: 350px;
+  min-width: 260px;
+  background: #E6F4E6;
+  border-radius: 20px;
+  box-shadow: 0 2px 8px rgba(49,113,52,0.09);
+  padding: 28px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  top: 0;
+}
+.carrito-resumen {
+  width: 100%;
+  max-width: 350px;
+  margin: 0 auto;
+  padding: 28px;
+  background: none;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-sizing: border-box;
+}
+.carrito-resumen h3 {
+  font-family: 'Roboto Serif', serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1B281B;
+}
+.carrito-linea {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Public Sans', sans-serif;
+  font-size: 1rem;
+  color: #1B281B;
+  margin-bottom: 8px;
+}
+.carrito-linea.total {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+.carrito-finalizar {
+  width: 100%;
+  padding: 12px 0;
+  background: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 16px;
+  font-family: 'Public Sans', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 8px;
+}
+.carrito-pago {
+  text-align: center;
+  color: #6B7C6B;
+  font-size: 0.95rem;
+  font-family: 'Public Sans', sans-serif;
+  margin-top: 8px;
+}
+
+@media (max-width: 900px) {
+  .contenedor-pago {
+    flex-direction: column;
+    gap: 32px;
+    padding: 24px 8px 0 8px;
+  }
+  .carrito {
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+    position: static;
+    top: unset;
+  }
+  .carrito-resumen {
+    max-width: 100%;
+    padding: 18px 8px;
+  }
+  .fila-form {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

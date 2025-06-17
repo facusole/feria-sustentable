@@ -19,54 +19,58 @@
         <img src="img/Logo.png" alt="Logo FeriaEco" class="logo">
         <h1>FeriaEco 2025</h1>
         <nav class="menu">
-            <a href="#">Inicio</a>
+            <a href="./index.html">Inicio</a>
             <a href="#">Stands</a>
-            <a href="#">Entradas</a>
-            <a href="contacto.html">Contacto</a>
+            <a href="./entradas.html">Entradas</a>
+            <a href="./contacto.html">Contacto</a>
         </nav>
     </header>
     <main class="contenedor-entradas">
         <div class="fila-superior">
             <section class="selector-ciudad-fecha centrado">
                 <h3>Seleccionar Ciudad y Fecha</h2>
-                <div class="selector-flex">
-                    <div class="selector-col">
-                        <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M11.5 11H6.7H3.5V14.2V21H11.5M11.5 11V3H21.5V21H11.5M11.5 11V21M15 7H18M15 10H18M15 13H18M15 16H18"
-                                stroke="#1B281B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
+                    <div class="selector-flex">
+                        <div class="selector-col">
+                            <svg width="25" height="24" viewBox="0 0 25 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M11.5 11H6.7H3.5V14.2V21H11.5M11.5 11V3H21.5V21H11.5M11.5 11V21M15 7H18M15 10H18M15 13H18M15 16H18"
+                                    stroke="#1B281B" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
 
-                        <label for="selectCiudad">Ciudad
-                        </label>
-                        <select id="selectCiudad" onchange="actualizarFechas()">
-                            <option value="">
-                                <div>
-                                    Elige una ciudad
-                                </div>
-                            </option>
-                            <option value="Rosario">Rosario</option>
-                            <option value="Mendoza">Mendoza</option>
-                            <option value="Córdoba">Córdoba</option>
-                        </select>
-                    </div>
-                    <div class="selector-col">
-                        <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M16.5 2V6M8.5 2V6M3.5 10H21.5M5.5 4H19.5C20.6046 4 21.5 4.89543 21.5 6V20C21.5 21.1046 20.6046 22 19.5 22H5.5C4.39543 22 3.5 21.1046 3.5 20V6C3.5 4.89543 4.39543 4 5.5 4Z"
-                                stroke="#1B281B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
+                            <label for="selectCiudad">Ciudad
+                            </label>
+                            <select id="selectCiudad" onchange="actualizarFechas()">
+                                <option value="">
+                                    <div>
+                                        Elige una ciudad
+                                    </div>
+                                </option>
+                                <option value="Rosario">Rosario</option>
+                                <option value="Mendoza">Mendoza</option>
+                                <option value="Córdoba">Córdoba</option>
+                            </select>
+                        </div>
+                        <div class="selector-col">
+                            <svg width="25" height="24" viewBox="0 0 25 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M16.5 2V6M8.5 2V6M3.5 10H21.5M5.5 4H19.5C20.6046 4 21.5 4.89543 21.5 6V20C21.5 21.1046 20.6046 22 19.5 22H5.5C4.39543 22 3.5 21.1046 3.5 20V6C3.5 4.89543 4.39543 4 5.5 4Z"
+                                    stroke="#1B281B" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
 
-                        <label for="selectFecha">Fecha</label>
-                        <select id="selectFecha">
-                            <option value="">Selecciona una fecha</option>
-                        </select>
+                            <label for="selectFecha">Fecha</label>
+                            <select id="selectFecha">
+                                <option value="">Selecciona una fecha</option>
+                            </select>
+                        </div>
+                        <div class="selector-col selector-btn">
+                            <label style="height: 18px;"></label>
+                            <button type="button" onclick="confirmarSeleccion()">Confirmar</button>
+                        </div>
                     </div>
-                    <div class="selector-col selector-btn">
-                        <label style="height: 18px;"></label>
-                        <button type="button" onclick="confirmarSeleccion()">Confirmar</button>
-                    </div>
-                </div>
             </section>
         </div>
 
@@ -136,7 +140,7 @@
                         <span>Total</span>
                         <span id="total">$0</span>
                     </div>
-                    <button type="button" class="carrito-finalizar">Finalizar compra</button>
+                    <button type="button" class="carrito-finalizar" onclick="window.location.href='pago.html'">Finalizar compra</button>
                     <div class="carrito-pago">Opciones de pago seguras disponibles</div>
                     <div class="carrito-promo">
                         <input id="promoCodeInput" type="text" placeholder="Código promocional" />
@@ -145,7 +149,7 @@
                 </div>
                 <section class="promo-link">
                     <h3>¡No te pierdas nuestras promociones especiales!</h3>
-                    <a href="https://ejemplo.com/promociones" target="_blank" class="promo-btn">Ver promociones</a>
+                    <a href="./promos.html" target="_blank" class="promo-btn">Ver promociones</a>
                 </section>
             </aside>
         </div>
