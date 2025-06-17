@@ -36,7 +36,8 @@ body {
 
 /* Hero */
 .hero {
-  text-align: center;
+  max-width: 1000px;
+  margin-inline: auto;
   padding: 40px 20px;
 }
 
@@ -55,12 +56,14 @@ body {
 
 /* Agenda */
 .agenda {
-  padding: 40px 20px;
+  padding-block: 40px;
+  max-width: 1000px;
+  margin-inline: auto;
 }
 
 .dias {
   display: flex;
-  justify-content: flex-start; /* Alineado a la izquierda */
+  justify-content: flex-start;
   gap: 20px;
   margin-bottom: 30px;
   padding-left: 10px;
@@ -446,7 +449,6 @@ button[type="submit"]:hover {
   height: 2px;
   background-color: #b6b6a8;
   margin: 60px auto 40px;
-  width: 80%;
 }
 
 .mensaje-seguridad {
@@ -537,8 +539,12 @@ footer {
   }
 
   .dias {
-    flex-direction: column;
-    gap: 10px;
+    gap: 16px;
+    justify-content: center;
+  }
+
+  .divisor {
+    width: 80%;
   }
 }
 
