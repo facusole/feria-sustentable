@@ -91,10 +91,10 @@ body {
 
 .actividad {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   gap: 20px;
   margin-bottom: 30px;
+  width: 100%;
 }
 
 .actividad img {
@@ -102,6 +102,13 @@ body {
   height: 200px;
   border-radius: 20px;
   object-fit: cover;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 
 .info h3 {
@@ -555,6 +562,10 @@ footer {
     width: 100%;
     max-width: 300px;
     height: auto;
+  }
+
+  .info {
+    flex-direction: column;
   }
 
   .dias {
