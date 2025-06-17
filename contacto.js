@@ -29,6 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const form = document.querySelector('.formulario');
     const submitBtn = form.querySelector('button[type="submit"]');
     const originalText = submitBtn.textContent;
+    const successBanner = document.querySelector(".success_banner")
   
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
@@ -47,6 +48,8 @@ document.addEventListener('DOMContentLoaded', () => {
   
         if (response.ok) { 
           submitBtn.textContent = '¡Enviado!';
+          successBanner.style.display = 'block';
+          
           form.reset(); 
         } else {
           const data = await response.json();
@@ -60,6 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => {
           submitBtn.textContent = originalText;
           submitBtn.disabled = false;
+          successBanner.style.display = 'none';
         }, 6000); 
       }
     });

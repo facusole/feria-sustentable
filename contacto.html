@@ -35,31 +35,37 @@
               comentario.
             </p>
           </div>
-          <form
-            class="formulario"
-            action="https://formspree.io/f/mdkzdanl"
-            method="POST"
-          >
-            <input type="text" name="nombre" placeholder="Nombre" required />
-            <input
-              type="text"
-              name="apellido"
-              placeholder="Apellido"
-              required
-            />
-            <input type="email" name="email" placeholder="Email" required />
-            <textarea
-              name="mensaje"
-              placeholder="Escribe tu mensaje aquí..."
-              required
-            ></textarea>
-            <input
-              type="hidden"
-              name="_subject"
-              value="Nuevo mensaje de FeriaEco 2025"
-            />
-            <button type="submit">Enviar</button>
-          </form>
+          <div class="formulario-container">
+            <form
+              class="formulario"
+              action="https://formspree.io/f/mdkzdanl"
+              method="POST"
+            >
+              <input type="text" name="nombre" placeholder="Nombre" required />
+              <input
+                type="text"
+                name="apellido"
+                placeholder="Apellido"
+                required
+              />
+              <input type="email" name="email" placeholder="Email" required />
+              <textarea
+                name="mensaje"
+                placeholder="Escribe tu mensaje aquí..."
+                required
+              ></textarea>
+              <input
+                type="hidden"
+                name="_subject"
+                value="Nuevo mensaje de FeriaEco 2025"
+              />
+              <button type="submit">Enviar</button>
+            </form>
+            <p class="success_banner">
+              ¡Gracias por tu consulta! Te responderemos vía email en las
+              próximas 24 horas.
+            </p>
+          </div>
         </div>
       </section>
 
