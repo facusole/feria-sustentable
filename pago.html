@@ -1,108 +1,113 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pago - FeriaEco 2025</title>
-  <link rel="stylesheet" href="estilos.css" />
-  <link rel="stylesheet" href="estilosPago.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500&family=Roboto+Serif:wght@700&display=swap" rel="stylesheet" />
-  <link rel="icon" href="img/Logo.png" type="image/png">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pago - FeriaEco 2025</title>
+    <link rel="stylesheet" href="estilos.css" />
+    <link rel="stylesheet" href="estilosPago.css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500&family=Roboto+Serif:wght@700&display=swap"
+        rel="stylesheet" />
+    <link rel="icon" href="img/Logo.png" type="image/png">
 </head>
+
 <body>
-  <header class="encabezado">
-    <img src="img/Logo.png" alt="Logo FeriaEco" class="logo">
-    <h1>FeriaEco 2025</h1>
-    <nav class="menu">
-        <a href="./index.html">Inicio</a>
-        <a href="#">Stands</a>
-        <a href="./entradas.html">Entradas</a>
-        <a href="./contacto.html">Contacto</a>
-    </nav>
-  </header>
-  <main class="contenedor-pago">
-    <div class="pago-formulario">
-      <h2>Pago</h2>
-      <div class="pago-metodos">
-        <button class="pago-metodo activo"><span class="icono-tarjeta"></span>Pagar con tarjeta</button>
-        <button class="pago-metodo"><span class="icono-paylater"></span>Pagar con PayLater</button>
-        <button class="pago-metodo"><span class="icono-apple"></span>Pagar con Apple Pay</button>
-      </div>
-      <form class="formulario-tarjeta">
-        <div class="fila-form">
-          <div class="campo-form">
-            <label for="numero-tarjeta">Número de tarjeta*</label>
-            <input type="text" id="numero-tarjeta" placeholder="nombre@ejemplo.com" />
-          </div>
-          <div class="campo-form">
-            <label for="vencimiento">Fecha de vencimiento*</label>
-            <input type="text" id="vencimiento" placeholder="11 / 22" />
-          </div>
-          <div class="campo-form">
-            <label for="cvv">CVV*</label>
-            <input type="text" id="cvv" placeholder="123" />
-          </div>
+    <header class="encabezado">
+        <img src="img/Logo.png" alt="Logo FeriaEco" class="logo">
+        <h1>FeriaEco 2025</h1>
+        <nav class="menu">
+            <a href="./index.html">Inicio</a>
+            <a href="./mapa.html">Ferias</a>
+            <a href="./entradas.html">Entradas</a>
+            <a href="./contacto.html">Contacto</a>
+        </nav>
+    </header>
+    <main class="contenedor-pago">
+        <div class="pago-formulario">
+            <h2>Pago</h2>
+            <div class="pago-metodos">
+                <button class="pago-metodo activo"><span class="icono-tarjeta"></span>Pagar con tarjeta</button>
+                <button class="pago-metodo"><span class="icono-paylater"></span>Pagar con PayLater</button>
+                <button class="pago-metodo"><span class="icono-apple"></span>Pagar con Apple Pay</button>
+            </div>
+            <form class="formulario-tarjeta">
+                <div class="fila-form">
+                    <div class="campo-form">
+                        <label for="numero-tarjeta">Número de tarjeta*</label>
+                        <input type="text" id="numero-tarjeta" placeholder="nombre@ejemplo.com" />
+                    </div>
+                    <div class="campo-form">
+                        <label for="vencimiento">Fecha de vencimiento*</label>
+                        <input type="text" id="vencimiento" placeholder="11 / 22" />
+                    </div>
+                    <div class="campo-form">
+                        <label for="cvv">CVV*</label>
+                        <input type="text" id="cvv" placeholder="123" />
+                    </div>
+                </div>
+                <div class="fila-form">
+                    <div class="campo-form direccion-checkbox">
+                        <input type="checkbox" id="usar-direccion-envio" />
+                        <label for="usar-direccion-envio">Usar dirección de envío como dirección de facturación</label>
+                    </div>
+                </div>
+                <div class="fila-form">
+                    <div class="campo-form">
+                        <label for="nombre">Nombre*</label>
+                        <input type="text" id="nombre" placeholder="nombre@ejemplo.com" />
+                    </div>
+                    <div class="campo-form">
+                        <label for="apellido">Apellido*</label>
+                        <input type="text" id="apellido" placeholder="+1 (415) 123-4567" />
+                    </div>
+                </div>
+                <div class="fila-form">
+                    <div class="campo-form">
+                        <label for="direccion">Dirección*</label>
+                        <input type="text" id="direccion" placeholder="1234 Calle Principal" />
+                        <a href="#" class="agregar-linea">Agregar línea de dirección</a>
+                    </div>
+                </div>
+                <div class="fila-form">
+                    <div class="campo-form">
+                        <label for="ciudad">Ciudad*</label>
+                        <input type="text" id="ciudad" placeholder="Avellaneda" />
+                    </div>
+                    <div class="campo-form">
+                        <label for="codigo-postal">Código postal*</label>
+                        <input type="text" id="codigo-postal" placeholder="12345" />
+                    </div>
+                </div>
+                <div class="fila-form">
+                    <div class="campo-form">
+                        <label for="provincia">Estado / Provincia*</label>
+                        <input type="text" id="provincia" placeholder="Buenos Aires" />
+                    </div>
+                </div>
+            </form>
         </div>
-        <div class="fila-form">
-          <div class="campo-form direccion-checkbox">
-            <input type="checkbox" id="usar-direccion-envio" />
-            <label for="usar-direccion-envio">Usar dirección de envío como dirección de facturación</label>
-          </div>
-        </div>
-        <div class="fila-form">
-          <div class="campo-form">
-            <label for="nombre">Nombre*</label>
-            <input type="text" id="nombre" placeholder="nombre@ejemplo.com" />
-          </div>
-          <div class="campo-form">
-            <label for="apellido">Apellido*</label>
-            <input type="text" id="apellido" placeholder="+1 (415) 123-4567" />
-          </div>
-        </div>
-        <div class="fila-form">
-          <div class="campo-form">
-            <label for="direccion">Dirección*</label>
-            <input type="text" id="direccion" placeholder="1234 Calle Principal" />
-            <a href="#" class="agregar-linea">Agregar línea de dirección</a>
-          </div>
-        </div>
-        <div class="fila-form">
-          <div class="campo-form">
-            <label for="ciudad">Ciudad*</label>
-            <input type="text" id="ciudad" placeholder="Avellaneda" />
-          </div>
-          <div class="campo-form">
-            <label for="codigo-postal">Código postal*</label>
-            <input type="text" id="codigo-postal" placeholder="12345" />
-          </div>
-        </div>
-        <div class="fila-form">
-          <div class="campo-form">
-            <label for="provincia">Estado / Provincia*</label>
-            <input type="text" id="provincia" placeholder="Buenos Aires" />
-          </div>
-        </div>
-      </form>
-    </div>
-    <aside class="carrito">
-      <div class="carrito-resumen">
-        <h3>Resumen del Carrito</h3>
-        <div class="carrito-linea">
-          <span>Subtotal</span>
-          <span>$0</span>
-        </div>
-        <div class="carrito-linea">
-          <span>Descuento</span>
-          <span>$0</span>
-        </div>
-        <div class="carrito-linea total">
-          <span>Total</span>
-          <span>$0</span>
-        </div>
-        <button type="button" class="carrito-finalizar">Finalizar compra</button>
-        <div class="carrito-pago">Opciones de pago seguras disponibles</div>
-      </div>
-    </aside>
-  </main>
+        <aside class="carrito">
+            <div class="carrito-resumen">
+                <h3>Resumen del Carrito</h3>
+                <div class="carrito-linea">
+                    <span>Subtotal</span>
+                    <span>$0</span>
+                </div>
+                <div class="carrito-linea">
+                    <span>Descuento</span>
+                    <span>$0</span>
+                </div>
+                <div class="carrito-linea total">
+                    <span>Total</span>
+                    <span>$0</span>
+                </div>
+                <button type="button" class="carrito-finalizar">Finalizar compra</button>
+                <div class="carrito-pago">Opciones de pago seguras disponibles</div>
+            </div>
+        </aside>
+    </main>
 </body>
+
 </html>
