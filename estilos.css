@@ -677,3 +677,147 @@ footer {
     padding: 10px 16px;
   }
 }
+
+.promo-btn {
+  font-size: 14px;
+}
+
+/* Modal de Inscripción */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  display: grid;
+  place-items: center;
+  place-content: center;
+  inset: 0;
+  height: 100dvh;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+}
+
+.modal-contenido {
+  background-color: #fbfdfc;
+  
+  padding: 24px;
+  border-radius: 16px;
+  max-width: 350px;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.cerrar-modal {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 15px;
+}
+
+.cerrar-modal:hover,
+.cerrar-modal:focus {
+  color: #1b281b;
+  text-decoration: none;
+}
+
+.modal-contenido h2 {
+  font-family: "Roboto Serif", serif;
+  font-size: 24px;
+  margin-bottom: 25px;
+  color: #1b281b;
+}
+
+.form-inscripcion {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.campo-formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.campo-formulario label {
+  font-weight: 500;
+  color: #1b281b;
+  font-size: 16px;
+}
+
+.campo-formulario input {
+  padding: 12px 16px;
+  border: 2px solid #ddede1;
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: "Public Sans", sans-serif;
+  transition: border-color 0.3s ease;
+}
+
+.campo-formulario input:focus {
+  outline: none;
+  border-color: #39833c;
+}
+
+.botones-formulario {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.btn-inscribir,
+.btn-cancelar {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: "Public Sans", sans-serif;
+}
+
+.btn-inscribir {
+  background-color: #39833c;
+  color: white;
+  flex: 2;
+  width: 100%;
+}
+
+.btn-inscribir:hover {
+  background-color: #2d6a30;
+  transform: translateY(-2px);
+}
+
+.btn-cancelar {
+  background-color: #f4f8f1;
+  color: #1b281b;
+  border: 2px solid #ddede1;
+  flex: 1;
+}
+
+.btn-cancelar:hover {
+  background-color: #ddede1;
+  transform: translateY(-2px);
+}
+
+/* Responsive para el modal */
+@media (max-width: 768px) {
+  .modal-contenido {
+    margin: 10% auto;
+    padding: 20px;
+    width: 95%;
+  }
+  
+  .botones-formulario {
+    flex-direction: column;
+  }
+  
+  .btn-inscribir,
+  .btn-cancelar {
+    flex: none;
+  }
+}

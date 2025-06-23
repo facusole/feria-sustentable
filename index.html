@@ -45,7 +45,7 @@
             <strong>Dr. Valeria Montecinos</strong><br />Centro de Convenciones,
             Mendoza
           </p>
-          <a href="#">Inscribirse</a>
+          <a href="#" class="inscribirse-btn">Inscribirse</a>
         </div>
       </div>
 
@@ -56,7 +56,7 @@
         <div class="info">
           <h3>Taller de Reciclaje para Niños</h3>
           <p><strong>Ecopibes</strong><br />Parque Central, San Juan</p>
-          <a href="#">Inscribirse</a>
+          <a href="#" class="inscribirse-btn">Inscribirse</a>
         </div>
       </div>
 
@@ -70,7 +70,7 @@
             <strong>Chef Lucila Herrera</strong><br />Plaza Independencia,
             Tucumán
           </p>
-          <a href="#">Inscribirse</a>
+          <a href="#" class="inscribirse-btn">Inscribirse</a>
         </div>
       </div>
 
@@ -84,7 +84,7 @@
             <strong>Ing. Federico Santillán</strong><br />Centro Cultural,
             Córdoba
           </p>
-          <a href="#">Inscribirse</a>
+          <a href="#" class="inscribirse-btn">Inscribirse</a>
         </div>
       </div>
 
@@ -98,7 +98,7 @@
             <strong>Diseñadora Clara Villalba</strong><br />Galería de Arte,
             Rosario
           </p>
-          <a href="#">Inscribirse</a>
+          <a href="#" class="inscribirse-btn">Inscribirse</a>
         </div>
       </div>
 
@@ -112,7 +112,7 @@
             <strong>Artista Sofía Gutiérrez</strong><br />Museo de Arte Moderno,
             Buenos Aires
           </p>
-          <a href="#">Inscribirse</a>
+          <a href="#" class="inscribirse-btn">Inscribirse</a>
         </div>
       </div>
     </section>
@@ -158,5 +158,29 @@
       </div>
       <p>© FeriaEco 2025 – Todos los derechos reservados</p>
     </footer>
+
+    <!-- Modal de Inscripción -->
+    <div id="modal-inscripcion" class="modal">
+      <div class="modal-contenido">
+        <span class="cerrar-modal">&times;</span>
+        <h2>Inscripción a Actividad</h2>
+        <form action="https://formspree.io/f/manjplgo" method="POST" id="form-inscripcion" class="form-inscripcion">
+          <div class="campo-formulario">
+            <label for="name">Nombre completo:</label>
+            <input type="text" id="nombre" name="name" required>
+          </div>
+          <div class="campo-formulario">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="botones-formulario">
+            <button type="submit" class="btn-inscribir">Inscribirse</button>
+            <button type="button" class="btn-cancelar">Cancelar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="scriptInscripcion.js"></script>
   </body>
 </html>
