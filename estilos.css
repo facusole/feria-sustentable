@@ -687,13 +687,16 @@ footer {
   display: none;
   position: fixed;
   z-index: 1000;
-  display: grid;
-  place-items: center;
-  place-content: center;
   inset: 0;
   height: 100dvh;
   background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(5px);
+}
+
+.modal.mostrar {
+  display: grid;
+  place-items: center;
+  place-content: center;
 }
 
 .modal-contenido {

@@ -8,20 +8,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Función para abrir el modal
     function abrirModal() {
-        modal.style.display = 'block';
+        modal.classList.add('mostrar');
         document.body.style.overflow = 'hidden'; // Prevenir scroll del body
     }
 
     // Función para cerrar el modal
     function cerrarModalFunc() {
-        modal.style.display = 'none';
+        modal.classList.remove('mostrar');
         document.body.style.overflow = 'auto'; // Restaurar scroll del body
         formInscripcion.reset(); // Limpiar el formulario
     }
 
     // Event listeners para abrir el modal
     inscribirseBtns.forEach(btn => {
-        btn.addEventListener('click', (e) => {
+        btn.addEventListener('click', function(e) {
             e.preventDefault();
             abrirModal();
         });
@@ -32,55 +32,27 @@ document.addEventListener('DOMContentLoaded', function() {
     btnCancelar.addEventListener('click', cerrarModalFunc);
 
     // Cerrar modal al hacer clic fuera de él
-    window.addEventListener('click',(e) => {
+    window.addEventListener('click', function(e) {
         if (e.target === modal) {
             cerrarModalFunc();
         }
     });
 
     // Cerrar modal con la tecla Escape
-    document.addEventListener('keydown',(e) => {
-        if (e.key === 'Escape' && modal.style.display === 'block') {
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && modal.classList.contains('mostrar')) {
             cerrarModalFunc();
         }
     });
 
     // Manejar el envío del formulario
-    formInscripcion.addEventListener('submit', async (e) => {
+    formInscripcion.addEventListener('submit', function(e) {
         e.preventDefault();
-                
-        try {
-            const response = await fetch(form.action, {
-              method: form.method,
-              body: new FormData(form), 
-              headers: {
-                'Accept': 'application/json' 
-              }
-            });
-      
-            if (response.ok) { 
-              submitBtn.textContent = '¡Enviado!';
-              
-              form.reset(); 
-            } else {
-              const data = await response.json();
-              console.error('Error de Formspree:', data.errors);
-              submitBtn.textContent = 'Error al enviar';
-              submitBtn.style.backgroundColor = 'red';
-            }
-          } catch (error) {
-            console.error('Error de red:', error);
-            submitBtn.textContent = 'Error de conexión';
-          } finally {
-            setTimeout(() => {
-              submitBtn.textContent = originalText;
-              submitBtn.style.backgroundColor = '#39833C';
-              submitBtn.disabled = false;
-            }, 6000); 
-          }
-
-        // Aquí puedes agregar la lógica para enviar los datos
-        // Por ahora solo mostraremos un mensaje de confirmación
+        
+        const nombre = document.getElementById('nombre').value;
+        const email = document.getElementById('email').value;
+        
+        // Mostrar mensaje de confirmación
         alert(`¡Gracias por inscribirte!\n\nNombre: ${nombre}\nEmail: ${email}\n\nTe enviaremos más información pronto.`);
         
         cerrarModalFunc();
